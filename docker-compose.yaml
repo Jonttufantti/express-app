@@ -1,9 +1,9 @@
 services:
   watchtower:
-    image: webhippie/watchtower
+    image: webhippie/watchtower:latest
     environment:
       - WATCHTOWER_POLL_INTERVAL=60 <em># Poll every 60 seconds</em>
-      - WATCHTOWER_CONTAINERS=express-app
+
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     container_name: watchtower
