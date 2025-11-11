@@ -1,6 +1,6 @@
 services:
   watchtower:
-    image: containrrr/watchtower
+    image: webhippie/watchtower
     environment:
       - WATCHTOWER_POLL_INTERVAL=60 <em># Poll every 60 seconds</em>
       - WATCHTOWER_CONTAINERS=express-app
