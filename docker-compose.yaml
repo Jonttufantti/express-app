@@ -9,6 +9,7 @@ services:
     container_name: watchtower
 
   express-app:
+    image: joonanzo/express-app:latest
     ports:
       - "3000:8080"
     container_name: express-app
