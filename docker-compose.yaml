@@ -1,13 +1,15 @@
 services:
   watchtower:
-    image: webhippie/watchtower:latest
+    image: beatkind/watchtower:latest
     environment:
-      - WATCHTOWER_POLL_INTERVAL=60 <em># Poll every 60 seconds</em>
-
+      WATCHTOWER_POLL_INTERVAL: "60"
+      WATCHTOWER_CLEANUP: "true"
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     container_name: watchtower
 
   express-app:
+    ports:
+      - "3000:8080"
     container_name: express-app
     build: .
